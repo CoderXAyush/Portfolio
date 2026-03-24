@@ -1,0 +1,114 @@
+.mini-game {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.mini-game.active {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.game-start-btn {
+  background: none;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  padding: 0.5rem 1.2rem;
+  transition: all var(--transition);
+  text-transform: uppercase;
+}
+
+.game-start-btn:hover {
+  border-color: var(--accent);
+  color: var(--text-active);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.game-hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.game-timer {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  letter-spacing: 0.1em;
+}
+
+.game-score {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-active);
+}
+
+.game-word {
+  display: flex;
+  gap: 0.15rem;
+  margin-bottom: 0.6rem;
+}
+
+.game-char {
+  font-family: 'IBM Plex Mono', var(--font-body);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  letter-spacing: 0.08em;
+  transition: color 0.15s ease;
+}
+
+.game-char.correct {
+  color: #4ade80;
+}
+
+.game-char.wrong {
+  color: #f87171;
+}
+
+.game-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-active);
+  font-family: 'IBM Plex Mono', var(--font-body);
+  font-size: 1rem;
+  padding: 0.4rem 0;
+  outline: none;
+  caret-color: var(--accent);
+  letter-spacing: 0.08em;
+  width: 100%;
+}
+
+.game-input:focus {
+  border-bottom-color: var(--accent);
+}
+
+.game-result {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.game-score-final {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 200;
+  color: var(--text-active);
+}
+
+.game-score-label {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+}

@@ -1,0 +1,90 @@
+.tech-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.tech-category {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.tech-cat-title {
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.tech-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
+  gap: 1rem;
+}
+
+.tech-chip {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: default;
+}
+
+.tech-icon-mask {
+  width: 32px;
+  height: 32px;
+  background-color: var(--text-secondary);
+  -webkit-mask: var(--icon-url) center/contain no-repeat;
+  mask: var(--icon-url) center/contain no-repeat;
+  transition: background-color 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+.tech-chip:hover {
+  color: var(--text-primary);
+  border-color: var(--hover-color);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--hover-color) 15%, transparent);
+  transform: translateY(-2px);
+}
+
+.tech-chip:hover .tech-icon-mask {
+  background-color: var(--hover-color);
+  opacity: 1;
+  filter: drop-shadow(0 0 8px color-mix(in srgb, var(--hover-color) 50%, transparent));
+  transform: scale(1.1);
+}
+
+@media (max-width: 800px) {
+  /* On mobile, show full brand colors by default since hover doesn't exist */
+  .tech-icon-mask {
+    background-color: var(--hover-color);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 6px color-mix(in srgb, var(--hover-color) 40%, transparent));
+  }
+  
+  .tech-chip {
+    border-color: color-mix(in srgb, var(--hover-color) 40%, transparent);
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .tech-chip:active {
+    transform: scale(0.95);
+    background: rgba(255, 255, 255, 0.05);
+  }
+}
