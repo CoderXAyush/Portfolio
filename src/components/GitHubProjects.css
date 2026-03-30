@@ -127,3 +127,40 @@
   color: var(--text-secondary);
   padding: 1rem 0;
 }
+
+.error-notice {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-left: 2px solid #ff4d4d;
+  background: rgba(255, 77, 77, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  animation: cardFadeIn 0.5s ease both;
+}
+
+.error-text {
+  font-size: 0.85rem;
+  color: #ffb3b3;
+  font-weight: 400;
+  margin: 0;
+}
+
+.retry-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-active);
+  padding: 0.4rem 0.8rem;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  width: fit-content;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.retry-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--text-active);
+}
